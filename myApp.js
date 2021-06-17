@@ -124,7 +124,7 @@ const queryChain = (done) => {
   const foodToSearch = "burrito";
   let foodQuery = Person.find({ food: foodToSearch });
   foodQuery
-    .sort()
+    .sort("name")
     .select("-age")
     .exec((err, result) => {
       if (err) return console.log(err);
